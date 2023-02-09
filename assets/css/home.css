@@ -1,0 +1,119 @@
+.top{
+    padding: 10vh 13%;
+    height: 80vh;
+    width: 74%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/maze2.jpg");
+    background-size: cover;
+}
+.topHeader{
+    font-size: 90px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    cursor: default;
+    user-select: none;
+}
+.topText{
+    color: black;
+    margin: 5px;
+    font-size: 20px;
+    cursor: default;
+    user-select: none;
+    position: absolute;
+    bottom: 100px;
+    left: 44.5%;
+}
+.topBlur{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.89));
+}
+.scrollButton{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 50px;
+    left: 49.7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+    animation: 3s okok ease-in-out infinite;
+    transition: 150ms ease-in-out;
+}
+.scrollButton:hover{
+    color: #bfce19;
+    border-color: #bfce19;
+    text-shadow: 0 0 8px white;
+    box-shadow: 0 0 12px white;
+}
+@keyframes okok {
+    0%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.about{
+    width: 74%;
+    padding: 100px 13%;
+    display: flex;
+}
+.team{
+    padding: 100px 13%;
+    width: 74%;
+}
+.swiper {
+    margin: 100px auto;
+    width: 800px;
+    height: 350px;
+}
+.swiperLeft{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.swiperRight{
+    width: 60%;
+}
+.swiperImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(176, 176, 176);
+    border-radius: 30px;
+}
+.swiper-slide:nth-child(1n) {
+
+}
+.swiper-slide:nth-child(2n) {
+
+}
+.swiper-slide:nth-child(3n) {
+
+}
+.swiper-slide:nth-child(4n) {
+
+}

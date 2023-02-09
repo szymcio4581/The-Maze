@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Maze - Strona Główna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+<div class="topBlur"></div>
+<div class="top">
+    <p class="topHeader">Zagraj już teraz!</p>
+</div>
+<div class="topBlur"></div>
+<div class="scrollButton" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});">
+    <p style="margin: 0">🡳</p>
+</div>
+<p class="topText">Kliknij tutaj aby zacząć</p>
+<div id="about" class="about">
+    <div class="aboutLeft">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet consequatur cupiditate debitis deserunt doloribus, facilis ipsam iste iusto minima necessitatibus nemo non omnis, sit soluta suscipit, tenetur voluptatibus.</p>
+    </div>
+</div>
+<div class="team">
+    <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiperLeft">
+                    <img src="assets/images/Bez%20nazwy-1.png" class="swiperImage" alt="okok">
+                </div>
+                <div class="swiperRight">
+                    <h3>Łukasz Szymura</h3>
+                    <p>PHP lover. Frontend dev. &lt;3</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiperLeft">
+                    <img src="assets/images/Bez%20nazwy-1.png" class="swiperImage" alt="okok">
+                </div>
+                <div class="swiperRight">
+                    <h3>Łukasz Szymura</h3>
+                    <p>PHP lover. Frontend dev. &lt;3</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiperLeft">
+                    <img src="assets/images/Bez%20nazwy-1.png" class="swiperImage" alt="okok">
+                </div>
+                <div class="swiperRight">
+                    <h3>Łukasz Szymura</h3>
+                    <p>PHP lover. Frontend dev. &lt;3</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiperLeft">
+                    <img src="assets/images/Bez%20nazwy-1.png" class="swiperImage" alt="okok">
+                </div>
+                <div class="swiperRight">
+                    <h3>Łukasz Szymura</h3>
+                    <p>PHP lover. Frontend dev. &lt;3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar">
+    <div class="navLeft">
+        <h1><span style="color: #aaec43; text-shadow: 0 0 5px black;">T</span>he <span style="color: #aaec43;text-shadow: 0 0 5px black;">M</span>aze</h1>
+    </div>
+    <div class="navRight">
+        <div class="navButton">
+            <p onclick="window.location.href = 'index.html';" class="navButtonButton">Strona Główna</p>
+        </div>
+        <div class="navButton">
+            <p onclick="window.location.href = 'index.html';" class="navButtonButton">Dev Team</p>
+        </div>
+        <div class="navButton">
+            <p onclick="window.location.href = 'scoreboard.html';" class="navButtonButton">Tabela wyników</p>
+        </div>
+        <div class="navButton">
+            <p onclick="window.location.href = 'index.html';" class="navButtonButton">Logowanie</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footerLeft">
+        <p>Dominik Chudyka - Fullstack Dev</p>
+        <p>Jakub Cichocki - Backend Dev</p>
+    </div>
+    <div class="footerLogo">
+        <h1 style="margin: 0;"><span style="color: #aaec43; text-shadow: 0 0 5px black;">T</span>he <span style="color: #aaec43;text-shadow: 0 0 5px black;">M</span>aze</h1>
+    </div>
+    <div class="footerRight">
+        <p>Patryk Wawrzynek - Game Dev</p>
+        <p>Łukasz Szymura - Frontend Dev</p>
+    </div>
+</div>
+<div id="loader" class="loader">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+</body>
+<script src="assets/js/loader.js"></script>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    var swiper2 = new Swiper(".mySwiper2", {
+        grabCursor: true,
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+                shadow: true,
+                translate: ["-120%", 0, -500],
+            },
+            next: {
+                shadow: true,
+                translate: ["120%", 0, -500],
+            },
+        },
+    });
+</script>
+</html>
