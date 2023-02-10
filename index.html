@@ -25,8 +25,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias amet consequatur cupiditate debitis deserunt doloribus, facilis ipsam iste iusto minima necessitatibus nemo non omnis, sit soluta suscipit, tenetur voluptatibus.</p>
     </div>
 </div>
-<div class="team">
-    <div class="swiper mySwiper2">
+<div class="team" id="team">
+    <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="swiperLeft">
@@ -65,6 +65,7 @@
                 </div>
             </div>
         </div>
+        <div class="swiper-scrollbar"></div>
     </div>
 </div>
 <div class="navbar">
@@ -76,19 +77,19 @@
             <p onclick="window.location.href = 'index.html';" class="navButtonButton">Strona Główna</p>
         </div>
         <div class="navButton">
-            <p onclick="window.location.href = 'index.html';" class="navButtonButton">Dev Team</p>
+            <p onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});" class="navButtonButton">Dev Team</p>
         </div>
         <div class="navButton">
             <p onclick="window.location.href = 'scoreboard.html';" class="navButtonButton">Tabela wyników</p>
         </div>
         <div class="navButton">
-            <p onclick="window.location.href = 'index.html';" class="navButtonButton">Logowanie</p>
+            <p onclick="okokok()" class="navButtonButton">Logowanie</p>
         </div>
     </div>
 </div>
 <div class="footer">
     <div class="footerLeft">
-        <p>Dominik Chudyka - Fullstack Dev</p>
+        <p>Dominik Chudyka - Foolstack Dev</p>
         <p>Jakub Cichocki - Backend Dev</p>
     </div>
     <div class="footerLogo">
@@ -99,27 +100,49 @@
         <p>Łukasz Szymura - Frontend Dev</p>
     </div>
 </div>
+<div class="logyn" id="logyn">
+    <div class="actualLogyn">
+        <div class="login-box">
+            <p class="logynText">Logowanie</p>
+            <form method="post" action="./">
+                <div class="user-box">
+                    <input required="" name="username" type="text">
+                    <label>Nazwa Użytkownika</label>
+                </div>
+                <div class="user-box">
+                    <input required="" name="password" type="password">
+                    <label>Hasło</label>
+                </div>
+                <div class="logynClose">
+                    <img alt="zamknij" onclick="okok()" id="closeIco" src="assets/images/close.png">
+                </div>
+                <input type="submit" class="logynButton" value="Zaloguj się" name="submit">
+                <div class="logynResult">
+                    <p></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
 <div id="loader" class="loader">
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
 </body>
 <script src="assets/js/loader.js"></script>
+<script src="assets/js/login.js"></script>
 <script type="module">
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
-    var swiper2 = new Swiper(".mySwiper2", {
-        grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-            prev: {
-                shadow: true,
-                translate: ["-120%", 0, -500],
-            },
-            next: {
-                shadow: true,
-                translate: ["120%", 0, -500],
-            },
+    var swiper = new Swiper(".mySwiper", {
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
         },
+        autoplay: {
+            delay: 3000,
+        },
+        grabCursor: true,
     });
 </script>
 </html>
