@@ -23,6 +23,7 @@ table, tr{
 }
 th, td{
     width: 33%;
+    padding: 10px;
 }
 .scoreboard{
     width: 100%;
