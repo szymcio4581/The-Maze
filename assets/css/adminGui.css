@@ -1,0 +1,221 @@
+.main{
+    width: 100%;
+    height: 100vh;
+
+}
+.menu{
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -13vw;
+    top: 0;
+    padding: 1%;
+    box-shadow: 0 0 20px #444444;
+    transition: 300ms left ease-in-out;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+}
+.content{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/maze2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+}
+.burgir{
+    width: 100%;
+    height: 3.5vh;
+    display: flex;
+    justify-content: right;
+}
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+.burger input {
+    display: none;
+}
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.burger span:nth-of-type(1) {
+    top: 0;
+    transform-origin: left center;
+}
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0;
+    left: 5px;
+}
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0;
+    opacity: 0;
+}
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+#menuContent{
+    height: 85vh;
+    width: 100%;
+    opacity: 0;
+    transition: 300ms opacity ease-in-out;
+}
+.menuPfp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pfp{
+    width: 60%;
+    border-radius: 50%;
+}
+.wypelniacze{
+    display: flex;
+    flex-direction: column;
+}
+.wypelniaczeItem{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wypelniaczeText{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wypelniaczeIcon{
+    width: 40px;
+    height: 40px;
+}
+.logout{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logoutButton {
+    background: ghostwhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1em 1em 3em;
+    position: relative;
+    overflow: hidden;
+    font-size: 17px;
+    font-family: inherit;
+    border-radius: 12px;
+    border: 2px solid black;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+    transition: 400ms;
+    cursor: pointer;
+ }
+.logoutIcon{
+    width: 30px;
+    height: 30px;
+}
+.logoutButton .logoutIcon {
+    position: absolute;
+    left: .4em;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg);
+    transition: transform .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.logoutButton:hover{
+    box-shadow: 0 0 10px black;
+}
+.logoutButton:hover .logoutIcon {
+    transform: rotateY(-180deg) translateX(-.25em);
+}
+
+.logoutButton:active {
+    transform: scale(0.98);
+}
+.blur{
+    width: 96%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+}
+.contentLeft{
+    width: 45%;
+    height: 100%;
+}
+.contentRight{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table{
+    width: 80%;
+    height: 90%;
+    margin: 4% 18%;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 3px solid #bfce19;
+    border-radius: 40px;
+    padding: 1%;
+}
+table, tr{
+    width: 100%;
+    text-align: center;
+}
+th, td{
+    width: 33%;
+}
+.scoreboard{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.scoreboard::-webkit-scrollbar {
+    width: 7px;
+}
+.scoreboard::-webkit-scrollbar-thumb {
+    background: #565656;
+    border-radius: 5px;
+}
+.delete{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.delete:hover{
+    background-color: red;
+    color: white;
+}

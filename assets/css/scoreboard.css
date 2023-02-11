@@ -29,3 +29,11 @@ th, td{
     height: 100%;
     overflow: auto;
 }
+.scoreboard::-webkit-scrollbar {
+    width: 7px;
+}
+
+.scoreboard::-webkit-scrollbar-thumb {
+    background: #565656;
+    border-radius: 5px;
+}

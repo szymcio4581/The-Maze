@@ -34,7 +34,7 @@
                 </div>
                 <div class="swiperRight">
                     <h3>Łukasz Szymura</h3>
-                    <p>PHP lover. Frontend dev. &lt;3</p>
+                    <p>PHP lover. Frontend dev &lt;3</p>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="swiperRight">
                     <h3>Łukasz Szymura</h3>
-                    <p>PHP lover. Frontend dev. &lt;3</p>
+                    <p>PHP lover. Frontend dev &lt;3</p>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="swiperRight">
                     <h3>Łukasz Szymura</h3>
-                    <p>PHP lover. Frontend dev. &lt;3</p>
+                    <p>PHP lover. Frontend dev &lt;3</p>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="swiperRight">
                     <h3>Łukasz Szymura</h3>
-                    <p>PHP lover. Frontend dev. &lt;3</p>
+                    <p>PHP lover. Frontend dev &lt;3</p>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
     <div class="actualLogyn">
         <div class="login-box">
             <p class="logynText">Logowanie</p>
-            <form method="post" action="./">
+            <form method="post" action="index.php">
                 <div class="user-box">
                     <input required="" name="username" type="text">
                     <label>Nazwa Użytkownika</label>
@@ -118,7 +118,50 @@
                 </div>
                 <input type="submit" class="logynButton" value="Zaloguj się" name="submit">
                 <div class="logynResult">
-                    <p></p>
+                    <p><?php
+                        if(isset($_POST["submit"])){
+                            $user = $_POST["username"];
+                            $password = $_POST["password"];
+                            $connect = @new mysqli("localhost", "root", "", "themaze");
+                            $sql = "SELECT * FROM users WHERE login = '$user' AND password = '$password'";
+                            $result = mysqli_query($connect, $sql);
+                            if(!$connect){
+                                echo("Problem połączenia z bazą");
+                                show();
+                                exit();
+                            }
+                            if(!$result){
+                                echo("Problem z zapytaniem do bazy");
+                                show();
+                                exit();
+                            }
+                            if(!empty($user) && !empty($password)){
+                                if(mysqli_num_rows($result)>0){
+                        $row = mysqli_fetch_assoc($result);
+                        $_SESSION["id"] = $row["id"];
+                        $_SESSION["login"] = $login;
+                        $_SESSION["logged"] = true;
+                        $_SESSION["avatar"] = $row["avatar"];
+                        header('Location: x.php');
+                        }else{
+                        echo("Nieprawidłowy login bądź hasło!");
+                        show();
+                        }
+                        }else{
+                        echo("Wypełnij wszystkie pola!");
+                        show();
+                        }
+                        mysqli_close($connect);
+                        }
+
+                        function show(){
+                        echo("<script>
+                            document.getElementById('logyn').style.visibility = 'visible';
+                            document.getElementById('logyn').style.transition = 'opacity 500ms';
+                            document.getElementById('logyn').style.opacity = 1;
+                        </script>");
+                        }
+                        ?></p>
                 </div>
             </form>
         </div>
