@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="logout">
-            <button class="logoutButton" onclick="window.location.href = 'logout.php';">
+            <button id="okok" class="logoutButton" onclick="window.location.href = 'logout.php';">
                 <img class="logoutIcon" src="assets/images/log-out.png" alt=".">
                 <span>Wyloguj się</span>
             </button>
@@ -54,9 +54,61 @@
     <div class="content">
         <div class="blur">
             <div class="contentLeft">
-                <div>
-
+                <div class="leftTop">
+                    <div class="adminDel">
+                        <div class="adminDelHeader">
+                            <h3 style="margin: 0">Usuwanie Administratora</h3>
+                        </div>
+                        <form class="adminDelForm" method="post" action="panel.php">
+                            <select class="adminDelSelect" name="user" id="select" required>
+                                <option value="id">okok</option>
+                                <option value="id">okok</option>
+                                <option value="id">okok</option>
+                                <option value="id">okok</option>
+                            </select>
+                            <input class="delete" type="submit" value="Usuń">
+                        </form>
+                    </div>
+                    <div class="recordsClear">
+                        <div class="recordsClearHeader">
+                            <h3 style="margin: 0">Usuń Wszystkie Rekordy</h3>
+                        </div>
+                        <div class="recordsClearForm">
+                            <form action="panel.php" method="post">
+                                <input class="delete" type="submit" value="Usuń">
+                            </form>
+                        </div>
+                    </div>
                 </div>
+                <div class="holder">
+                    <div class="adminAdd">
+                        <div class="adminAddHeader">
+                            <h3 style="margin: 0">Dodawanie Administratora</h3>
+                        </div>
+                        <div class="adminAddContent">
+                            <form class="adminAddForm" action="panel.php" method="post">
+                                <div class="adminAddInputs">
+                                    <div class="pos">
+                                        <label for="username">Nazwa użytkownika</label>
+                                        <input class="addInput" type="text" name="username" id="username">
+                                    </div>
+                                    <div class="pos">
+                                        <label for="password">Hasło</label>
+                                        <input class="addInput" type="text" name="password" id="password">
+                                    </div>
+                                    <div class="pos">
+                                        <label for="password">Zdjęcie profilowe</label>
+                                        <input class="addInput" type="file" name="file" id="file">
+                                    </div>
+                                </div>
+                                <div class="adminAddButton">
+                                    <input class="add" type="submit" value="Add">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="contentRight">
                 <div class="table">
@@ -82,7 +134,7 @@
                                 <td>
                                     <form action='panel.php' method='post'>
                                         <input type='hidden' name='hidden' value=".$row["id"].">
-                                        <input class='delete' type='submit' value='Delete'>
+                                        <input class='delete' type='submit' value='Usuń'>
                                     </form>
                                 </td></tr>
                                 ");

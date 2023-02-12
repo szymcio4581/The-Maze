@@ -74,10 +74,13 @@
     display: flex;
 }
 .team{
-    padding: 100px 13%;
-    margin: 100px auto;
-    width: 800px;
-    height: 300px;
+    margin: 100px 13% 200px;
+    width: 74%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    scroll-margin-bottom: 160px;
 }
 .swiperLeft{
     width: 40%;
@@ -93,8 +96,8 @@
     border-radius: 50%;
 }
 .swiper {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 400px;
 }
 
 .swiper-slide {
@@ -224,4 +227,10 @@
     background-image: url("../images/maze2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+.teamHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }

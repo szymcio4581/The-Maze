@@ -137,8 +137,9 @@
     border-radius: 12px;
     border: 2px solid black;
     box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
-    transition: 400ms;
     cursor: pointer;
+    transition: 300ms;
+    opacity: 0;
  }
 .logoutIcon{
     width: 30px;
@@ -169,8 +170,11 @@
     display: flex;
 }
 .contentLeft{
-    width: 45%;
-    height: 100%;
+    width: 41%;
+    height: 94vh;
+    margin: 3vh 0 3vh 4%;
+    display: flex;
+    flex-direction: column;
 }
 .contentRight{
     width: 55%;
@@ -219,4 +223,139 @@ th, td{
 .delete:hover{
     background-color: red;
     color: white;
+}
+.leftTop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.adminDel{
+    width: 60%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 3px solid #bfce19;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.adminDelForm{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.adminDelSelect{
+    width: 50%;
+    background: none;
+    border-radius: 10px;
+    transition: 400ms;
+    text-align: center;
+    border: 2px solid black;
+}
+.adminDelSelect:focus{
+    box-shadow: 0 0 10px black;
+}
+.adminDelHeader{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+.recordsClear{
+    width: 30%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 3px solid #bfce19;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.recordsClearHeader{
+    text-align: center;
+}
+.recordsClearForm{
+    display: flex;
+    justify-content: center;
+}
+.holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.adminAdd{
+    width: 95%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 3px solid #bfce19;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.adminAddHeader{
+    width: 100%;
+    text-align: center;
+    height: 30%;
+}
+.adminAddContent{
+    width: 100%;
+    height: 70%;
+}
+.adminAddForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+.adminAddInputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.addInput{
+    background: none;
+    border-radius: 10px;
+    transition: 400ms;
+    text-align: center;
+    border: 2px solid black;
+}
+.addInput:focus{
+    box-shadow: 0 0 10px black;
+    outline: none;
+}
+.adminAddButton{
+    margin-top: 10px;
+}
+.add{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.add:hover{
+    background-color: greenyellow;
+}
+.pos{
+    display: flex;
+    flex-direction: column;
+}
+#file{
+    width: 230px;
+}
+#file::file-selector-button{
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    border-right: 2px solid black;
+    transition: 300ms;
+    background-color: white;
+}
+#file::file-selector-button:hover{
+    background-color: greenyellow;
 }

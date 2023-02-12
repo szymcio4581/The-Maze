@@ -19,10 +19,12 @@ body{
     top: 0;
     box-shadow: 0 0 15px #484848;
     background-color: rgba(255,255,255,0.7);
+    z-index: 2;
 }
 .navLeft{
     width: 30%;
     user-select: none;
+    cursor: pointer;
 }
 .navRight{
     width: 70%;
@@ -58,6 +60,8 @@ body{
     box-shadow: 0 0 15px #484848;
     background-color: rgba(255,255,255,0.7);
     cursor: default;
+    z-index: 2;
+
 }
 .footerLeft, .footerRight{
     display: flex;
