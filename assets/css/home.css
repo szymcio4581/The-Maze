@@ -73,47 +73,11 @@
     padding: 100px 13%;
     display: flex;
 }
-.team{
-    margin: 100px 13% 200px;
-    width: 74%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    scroll-margin-bottom: 160px;
+.aboutLeft{
+    width: 50%;
 }
-.swiperLeft{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-}
-.swiperRight{
-    width: 60%;
-}
-.swiperImage{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-}
-.swiper {
-    width: 70%;
-    height: 400px;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
+.aboutRight{
+    width: 50%;
 }
 .logyn{
     width: 100%;
@@ -199,6 +163,67 @@
 }
 #closeIco:hover{
     transform: rotate(90deg);
+}
+.logynButton{
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    transition: 200ms ease-in-out;
+}
+.logynButton:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.logynResult{
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+    width: 320px;
+    height: 27px;
+}
+.team{
+    margin: 100px 13% 200px;
+    width: 74%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    scroll-margin-bottom: 160px;
+}
+.swiperLeft{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.swiperRight{
+    width: 60%;
+}
+.swiperImage{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+.swiper {
+    width: 70%;
+    height: 400px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
 }
 .logynButton{
     border: 2px solid black;
