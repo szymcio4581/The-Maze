@@ -233,7 +233,7 @@
                                 $sql4 = ("INSERT INTO users(id, login, password, avatar) VALUES ('','$user','$password','$file')");
                                 $result3 = mysqli_query($connect, $sql3);
                                 if(!empty($user) && !empty($password) && !empty($file)){
-                                    if(mysqli_num_rows($result4)==0){
+                                    if(mysqli_num_rows($result3)==0){
                                         mysqli_query($connect, $sql4);
                                         echo("Zajerestrowałeś sie!");
                                         $filename = 'assets/images/avatar/'.$_FILES['file']["name"];
@@ -304,7 +304,7 @@
                         <table>
                             <?php
                             $connect = @new mysqli("localhost", "root", "", "themaze");
-                            $sql = "SELECT * FROM `score`";
+                            $sql = "SELECT * FROM `score` ORDER BY time ASC";
                             $result = mysqli_query($connect, $sql);
                             if(!$connect){
                                 echo("Problem połączenia z bazą");
